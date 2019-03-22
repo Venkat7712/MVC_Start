@@ -11,6 +11,7 @@ namespace MVC_Start.Controllers
   {
     public IActionResult Index()
     {
+
       return View();
     }
 
@@ -18,5 +19,18 @@ namespace MVC_Start.Controllers
     {
       return View();
     }
+
+    public ViewResult Guest()
+        {
+            GuestContact Contact = new GuestContact {
+                Name = "Venkat", Email = "venkat@gmail.com", Phone = "8162938273" };
+            return View(Contact);
+        }
+
+        [HttpPost]
+        public ViewResult Guest (GuestContact Contact)
+        {
+            return View(Contact);
+        }
   }
 }

@@ -1,0 +1,13 @@
+﻿@model GuestContact
+
+
+
+<form asp-controller="Home" asp-action="Guest" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <p>Name: <input asp-for="Name" /></p>
+    <p>Email: <input asp-for="Email" /></p>
+    <p>Phone number: <input asp-for="Phone" /></p>
+
+    <button type="submit">Submit</button>
+</form>
